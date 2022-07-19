@@ -25,6 +25,20 @@ import (
 	"golang.org/x/sys/unix"
 )
 
+/*
+255	local
+254	main
+253	default
+0	unspec
+*/
+const (
+	UnSpecTable  = 0
+	DefaultTable = 253
+	// MainTable default table
+	MainTable  = 254
+	LocalTable = 255
+)
+
 var (
 	//NotFoundError route not found error
 	ErrNotFound = errors.New("Route could not found")
